@@ -17,5 +17,22 @@ body {
   font-family: "Bai Jamjuree", sans-serif;
   font-style: normal;
 }
+@media (min-width: 1200px) {
+  body {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding: 0 30px;
+  }
+}
+
+.first-part {
+  background-image: url("../images/bg-header-desktop.png");
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px;
+}
 
 /*# sourceMappingURL=style.css.map */
