@@ -1,0 +1,48 @@
+$Strong-Cyan: hsl(171, 66%, 44%)
+$Light-Blue:  hsl(233, 100%, 69%)
+$Dark-Grayish-Blue:  hsl(210, 10%, 33%)
+$Grayish-Blue:  hsl(201, 11%, 66%)
+
+@mixin for-size($size) 
+    @if $size == phone-only 
+       @media (max-width: 375px) 
+        @content 
+    @else if $size == mobile-small 
+       @media (max-width: 480px) 
+        @content 
+    @else if $size == max-mobile 
+       @media (max-width: 767px) 
+        @content 
+    @else if $size == tablet-landscape-up 
+       @media (max-width: 991px) 
+        @content 
+    @else if $size == tablet-landscape-up 
+       @media (max-width: 1024px) 
+        @content 
+    @else if $size == desktop-up 
+       @media (max-width: 1200px)  
+        @content
+    @else if $size == desktop
+       @media (min-width: 1200px)  
+        @content
+    @else if $size == big-desktop-up 
+       @media (min-width: 1600px) 
+        @content 
+
+@mixin button($color,$color2)
+  
+  background: linear-gradient(90deg, $color,$color2 100%)
+  color: white
+  border-radius: 20px
+  padding: 9px 23px
+  border: none
+  cursor: pointer
+@mixin button-hover
+  opacity: 0.8
+  transition: 0.5s
+ul
+  list-style: none
+a
+  text-decoration: none
+  
+  opacity: 0.7
