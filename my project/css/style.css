@@ -1,18 +1,286 @@
-/* Error: Media rules may not be used within nested declarations.
- *    ,
- * 14 | /        @media (max-width: 767px) 
- * 15 | \          @content 
- *    '
- *   varble && mixsin.sass 14:8  for-size()
- *   style.sass 187:4            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Media rules may not be used within nested declarations.\a    \2577 \a 14 \2502  \250c         @media (max-width: 767px) \a 15 \2502  \2514           @content \a    \2575 \a   varble && mixsin.sass 14:8  for-size()\a   style.sass 187:4            root stylesheet";
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
+@media (max-width: 767px) {
+  ul {
+    flex-direction: column;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-style: normal;
+}
+
+.ind {
+  text-align: center;
+}
+.ind h1 {
+  color: hsl(210, 10%, 33%);
+}
+.ind p {
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: hsl(201, 11%, 66%);
+}
+
+.first-part {
+  background-image: url("../images/bg-header-desktop.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  .first-part {
+    padding: 80px 60px 0;
+  }
+}
+@media (max-width: 767px) {
+  .first-part {
+    padding: 40px 30px 0;
+    background-image: url("../images/bg-header-mobile.png");
+  }
+}
+.first-part img {
+  margin-left: 44%;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+@media (max-width: 767px) {
+  .first-part img {
+    margin-left: 36%;
+  }
+}
+.first-part h2 {
+  color: hsl(210, 10%, 33%);
+  width: fit-content;
+  margin: 15px auto;
+}
+.first-part p {
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: hsl(201, 11%, 66%);
+}
+.first-part .buttons {
+  width: fit-content;
+  margin: auto;
+}
+.first-part .buttons li {
+  border-radius: 27Px;
+  font-size: 14px;
+  width: 200px;
+  height: 36px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.first-part .buttons li.iOS {
+  background-color: hsl(171, 66%, 44%);
+}
+.first-part .buttons li.iOS:hover {
+  opacity: 0.9;
+  box-shadow: 2px 4px 15px hsl(171, 66%, 44%);
+}
+.first-part .buttons li.Mac {
+  background-color: hsl(233, 100%, 69%);
+}
+.first-part .buttons li.Mac:hover {
+  opacity: 0.9;
+  box-shadow: 2px 4px 15px hsl(233, 100%, 69%);
+}
+
+@media (min-width: 1200px) {
+  .track-part {
+    padding: 20px 60px 20px 0;
+  }
+}
+@media (max-width: 767px) {
+  .track-part {
+    padding: 20px 30px;
+  }
+}
+.track-part .ind {
+  text-align: center;
+}
+.track-part .ind h1 {
+  color: hsl(210, 10%, 33%);
+}
+.track-part .ind p {
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: hsl(201, 11%, 66%);
+}
+.track-part .part-tow {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+@media (max-width: 767px) {
+  .track-part .part-tow {
+    flex-direction: column;
+  }
+}
+.track-part .part-tow .img {
+  flex-basis: 45%;
+}
+.track-part .part-tow .img img {
+  max-width: 100%;
+}
+.track-part .part-tow .text div {
+  margin: 20px 0;
+}
+@media (max-width: 767px) {
+  .track-part .part-tow .text div {
+    text-align: center;
+  }
+}
+.track-part .part-tow .text div h3 {
+  color: hsl(210, 10%, 33%);
+}
+.track-part .part-tow .text div p {
+  color: hsl(201, 11%, 66%);
+  max-width: 400px;
+}
+
+@media (min-width: 1200px) {
+  .Access-part {
+    padding: 20px 60px;
+  }
+}
+@media (max-width: 767px) {
+  .Access-part {
+    padding: 20px 30px;
+  }
+}
+.Access-part .img {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .Access-part .img img {
+    width: 400px;
+    margin-top: 15px;
+  }
+}
+
+.workflow-part .prop {
+  display: flex;
+  padding: 20px 60px;
+  gap: 20%;
+}
+@media (max-width: 767px) {
+  .workflow-part .prop {
+    padding: 10px 30px;
+    flex-direction: column;
+  }
+}
+.workflow-part .prop .box {
+  flex-basis: 20%;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .workflow-part .prop .box {
+    margin-bottom: 20px;
+  }
+}
+.workflow-part .prop .box img {
+  margin-bottom: 20px;
+}
+.workflow-part .prop .box h4 {
+  color: hsl(210, 10%, 33%);
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .workflow-part .prop .box h4 {
+    margin-bottom: 20px;
+  }
+}
+.workflow-part .prop .box p {
+  color: hsl(201, 11%, 66%);
+  font-size: 13px;
+}
+
+.copny {
+  display: flex;
+  gap: 10%;
+  padding: 40px 60px;
+}
+@media (max-width: 767px) {
+  .copny {
+    padding: 20px 30px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .copny img {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.clipbard .buttons {
+  width: fit-content;
+  margin: auto;
+}
+.clipbard .buttons li {
+  border-radius: 27Px;
+  font-size: 14px;
+  width: 200px;
+  height: 36px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.clipbard .buttons li.iOS {
+  background-color: hsl(171, 66%, 44%);
+}
+.clipbard .buttons li.iOS:hover {
+  opacity: 0.9;
+  box-shadow: 2px 4px 15px hsl(171, 66%, 44%);
+}
+.clipbard .buttons li.Mac {
+  background-color: hsl(233, 100%, 69%);
+}
+.clipbard .buttons li.Mac:hover {
+  opacity: 0.9;
+  box-shadow: 2px 4px 15px hsl(233, 100%, 69%);
+}
+
+footer {
+  background-color: hsla(0, 0%, 94.1%, 0.32);
+  padding: 40px 60px;
+}
+@media (max-width: 767px) {
+  footer {
+    padding: 20px 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
