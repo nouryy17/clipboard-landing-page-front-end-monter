@@ -6,14 +6,198 @@
 body
   font-family: "Bai Jamjuree", sans-serif
   font-style: normal
-  @include for-size(desktop)
-    padding: 0 60px
-  @include for-size(max-mobile )
-    padding: 0 30px
+.ind
+    text-align: center
+    h1
+      color: $Dark-Grayish-Blue
+    p
+      width: 400px
+      margin: auto
+      text-align: center
+      margin-bottom: 15px
+      font-size: 14px
+      color: $Grayish-Blue
 .first-part
     background-image: url("../images/bg-header-desktop.png")
     background-size: cover
     background-position: center
-    padding-top: 80px 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @include for-size(desktop)
+      padding: 80px 60px 0
+    @include for-size(max-mobile)
+      padding: 40px 30px 0
+      background-image: url("../images/bg-header-mobile.png")
+
+    img
+      margin-left: 44%
+      margin-bottom: 15px
+      width: fit-content
+      @include for-size(max-mobile)
+        margin-left: 36%
+
+    h2
+      color:$Dark-Grayish-Blue
+      width: fit-content
+      margin: 15px auto
+    p
+      width: 400px
+      margin: auto
+      text-align: center
+      margin-bottom: 15px
+      font-size: 14px
+      color: $Grayish-Blue
+    .buttons
+      width: fit-content
+      margin: auto
+      li
+        border-radius: 27Px
+        font-size: 14px
+        width: 200px
+        height: 36px
+        padding: 10px
+        text-align: center
+        font-weight: bold
+        transition: 0.5s
+        &.iOS
+          background-color:$Strong-Cyan
+          &:hover
+            opacity: 0.9
+            box-shadow: 2px 4px 15px  $Strong-Cyan
+
+        &.Mac
+          background-color: $Light-Blue
+          &:hover
+            opacity: 0.9
+            box-shadow: 2px 4px 15px $Light-Blue
+.track-part
+  
+  @include for-size(desktop)
+    padding: 20px 60px 20px 0 
+  @include for-size(max-mobile)
+    padding: 20px 30px 
+  .ind
+    text-align: center
+    h1
+      color: $Dark-Grayish-Blue
+    p
+      width: 400px
+      margin: auto
+      text-align: center
+      margin-bottom: 15px
+      font-size: 14px
+      color: $Grayish-Blue
+  .part-tow
+    display: flex
+    align-items: center
+    gap: 10%
+    @include for-size(max-mobile)
+      flex-direction: column
+    .img
+      flex-basis: 45%
+      img
+        max-width: 100%
+    .text
+      div
+        margin: 20px 0
+        @include for-size(max-mobile)
+          text-align: center
+
+        h3
+          color: $Dark-Grayish-Blue
+        p
+          color: $Grayish-Blue
+          max-width: 400px
+.Access-part
+      @include for-size(desktop)
+        padding: 20px 60px 
+      @include for-size(max-mobile)
+        padding: 20px 30px 
+      .img
+          display: flex 
+          justify-content: center
+          img 
+           @include for-size(max-mobile)
+             width: 400px
+             margin-top: 15px 
+.workflow-part
+  .prop
+    display: flex
+    padding: 20px 60px 
+    gap: 20%
+    @include for-size(max-mobile)
+      padding: 10px 30px 
+      flex-direction: column
+    .box
+      flex-basis: 20%
+      text-align: center
+      @include for-size(max-mobile)
+           margin-bottom: 20px
+
+      img
+        margin-bottom: 20px
+      h4
+        color: $Dark-Grayish-Blue
+        margin-bottom: 10px
+        @include for-size(max-mobile)
+           margin-bottom: 20px
+      p
+        color: $Grayish-Blue
+        font-size: 13px
+.copny
+   display: flex
+   gap: 10%
+   padding: 40px 60px 
+   @include for-size(max-mobile)
+      padding: 20px 30px 
+      flex-direction: column
+   img
+     @include for-size(max-mobile)
+        width: fit-content
+        margin: auto
+        margin-bottom: 40px
+.clipbard
+.buttons
+      width: fit-content
+      margin: auto
+      li
+        border-radius: 27Px
+        font-size: 14px
+        width: 200px
+        height: 36px
+        padding: 10px
+        text-align: center
+        font-weight: bold
+        transition: 0.5s
+        &.iOS
+          background-color:$Strong-Cyan
+          &:hover
+            opacity: 0.9
+            box-shadow: 2px 4px 15px  $Strong-Cyan
+
+        &.Mac
+          background-color: $Light-Blue
+          &:hover
+            opacity: 0.9
+            box-shadow: 2px 4px 15px $Light-Blue
+footer
+  background-color: hsla(0, 0%, 94.1%, 0.32)
+  padding: 40px 60px 
+   @include for-size(max-mobile)
+      padding: 20px 30px 
+
+
+
+   
+      
+
+
+
+        
+          
+        
+
+    
 
     

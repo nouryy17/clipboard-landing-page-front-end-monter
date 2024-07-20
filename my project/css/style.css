@@ -1,38 +1,18 @@
-ul {
-  list-style: none;
-}
+/* Error: Media rules may not be used within nested declarations.
+ *    ,
+ * 14 | /        @media (max-width: 767px) 
+ * 15 | \          @content 
+ *    '
+ *   varble && mixsin.sass 14:8  for-size()
+ *   style.sass 187:4            root stylesheet */
 
-a {
-  text-decoration: none;
-  opacity: 0.7;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Media rules may not be used within nested declarations.\a    \2577 \a 14 \2502  \250c         @media (max-width: 767px) \a 15 \2502  \2514           @content \a    \2575 \a   varble && mixsin.sass 14:8  for-size()\a   style.sass 187:4            root stylesheet";
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-style: normal;
-}
-@media (min-width: 1200px) {
-  body {
-    padding: 0 60px;
-  }
-}
-@media (max-width: 767px) {
-  body {
-    padding: 0 30px;
-  }
-}
-
-.first-part {
-  background-image: url("../images/bg-header-desktop.png");
-  background-size: cover;
-  background-position: center;
-  padding-top: 80px;
-}
-
-/*# sourceMappingURL=style.css.map */

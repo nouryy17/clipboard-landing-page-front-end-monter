@@ -12,7 +12,7 @@ $Grayish-Blue:  hsl(201, 11%, 66%)
         @content 
     @else if $size == max-mobile 
        @media (max-width: 767px) 
-        @content 
+         @content 
     @else if $size == tablet-landscape-up 
        @media (max-width: 991px) 
         @content 
@@ -42,7 +42,12 @@ $Grayish-Blue:  hsl(201, 11%, 66%)
   transition: 0.5s
 ul
   list-style: none
+  display: flex
+  gap: 20px
+  @include for-size(max-mobile)
+     flex-direction: column
+
 a
   text-decoration: none
+  color: white
   
-  opacity: 0.7
