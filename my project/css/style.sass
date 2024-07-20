@@ -158,7 +158,10 @@ body
         margin: auto
         margin-bottom: 40px
 .clipbard
- .buttons
+  padding: 40px 60px 
+  @include for-size(max-mobile)
+      padding: 20px 30px 
+  .buttons
       width: fit-content
       margin: auto
       li
@@ -182,11 +185,35 @@ body
             opacity: 0.9
             box-shadow: 2px 4px 15px $Light-Blue
 footer
-  background-color: hsla(0, 0%, 94.1%, 0.32)
+  background-color: hsla(0, 0%, 94.1%, 0.5)
   padding: 40px 60px 
+  display: flex
+  align-items: center
   @include for-size(max-mobile)
       padding: 20px 30px 
-
+      flex-direction: column
+      text-align: center
+      gap: 20px
+  img
+    width: 100px
+  .list
+    flex: 1
+    display: flex
+    justify-content: space-evenly
+    @include for-size(max-mobile)
+       display: block
+    ul
+      display: block
+      li
+        color: $Grayish-Blue
+        margin-bottom: 20px
+        cursor: pointer
+        &:hover
+          color: $Dark-Grayish-Blue
+  .Communicate
+    svg
+      margin: 0 10px
+      cursor: pointer
 
 
    
