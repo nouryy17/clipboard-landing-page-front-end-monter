@@ -17,6 +17,8 @@ body
       margin-bottom: 15px
       font-size: 14px
       color: $Grayish-Blue
+      @include for-size(max-mobile)
+       max-width: 300px
 .first-part
     background-image: url("../images/bg-header-desktop.png")
     background-size: cover
@@ -24,30 +26,15 @@ body
     display: flex
     flex-direction: column
     justify-content: center
-    @include for-size(desktop)
-      padding: 80px 60px 0
+    padding: 80px 60px 0
     @include for-size(max-mobile)
       padding: 40px 30px 0
+    @include for-size(phone-only)
       background-image: url("../images/bg-header-mobile.png")
-
-    img
-      margin-left: 44%
-      margin-bottom: 15px
-      width: fit-content
-      @include for-size(max-mobile)
-        margin-left: 36%
-
-    h2
-      color:$Dark-Grayish-Blue
-      width: fit-content
-      margin: 15px auto
-    p
-      width: 400px
-      margin: auto
-      text-align: center
-      margin-bottom: 15px
-      font-size: 14px
-      color: $Grayish-Blue
+    .img
+      display: flex
+      justify-content: center
+      align-items: center
     .buttons
       width: fit-content
       margin: auto
@@ -88,6 +75,9 @@ body
       margin-bottom: 15px
       font-size: 14px
       color: $Grayish-Blue
+      @include for-size(max-mobile)
+       max-width: 300px
+
   .part-tow
     display: flex
     align-items: center
@@ -114,6 +104,7 @@ body
         padding: 20px 60px 
       @include for-size(max-mobile)
         padding: 20px 30px 
+      
       .img
           display: flex 
           justify-content: center
@@ -152,11 +143,19 @@ body
    @include for-size(max-mobile)
       padding: 20px 30px 
       flex-direction: column
+   @include for-size( tablet-landscape-up)
+     display: flex
+     flex-wrap: wrap
+     justify-content: center
+   
    img
      @include for-size(max-mobile)
         width: fit-content
         margin: auto
         margin-bottom: 40px
+     @include for-size( tablet-landscape-up)
+        margin-top: 30px
+     
 .clipbard
   padding: 40px 60px 
   @include for-size(max-mobile)
